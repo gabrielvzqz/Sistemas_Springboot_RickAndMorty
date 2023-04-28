@@ -1,0 +1,16 @@
+{
+    "nombre" : "Juan",
+    "edad" : 33,
+    "casado" : false,
+    "altura" : 1.8,
+    "direccion" : {
+        "calle" : "Av Hispanidad",
+        "pais" : "España",
+        "numero" : 33,
+        "cp" : 36950
+    },
+    "notafinal" : null,
+    "calificaciones" : [6,8],
+    "caracteristicas" : ["risueño", "inteligente", 10, true]
+}
+

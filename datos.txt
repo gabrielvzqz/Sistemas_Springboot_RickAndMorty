@@ -1,0 +1,3 @@
+gabo 3
+pulmon 300000
+corazon 1000000

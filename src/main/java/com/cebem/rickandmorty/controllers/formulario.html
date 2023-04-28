@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display:flex;
+            flex-direction:column;
+            padding:10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        #eliminar{
+            background-color: rgb(55, 94, 55);
+        }
+    </style>
+</head>
+<body>
+    <form action="http://localhost:8080/saveOnDisk" method="post">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" placeholder="nombre del producto">
+        <label for="name">Precio:</label>
+        <input type="text" name="price" id="price" placeholder="precio del producto">
+        <button type="submit">Enviar al servidor</button>
+    </form>
+    <hr/>
+    <button id="eliminar"> Eliminar fichero del servidor </button>
+    <script>
+        document.getElementById("eliminar").addEventListener("click",handleDelete)
+        function handleDelete(){
+            
+            fetch("http://localhost:8080/removeFromDisk", {method: "DELETE"})
+            .then(response => response.text())
+            .then(response => alert(response))
+        }
+    </script>
+</body>
+</html>
